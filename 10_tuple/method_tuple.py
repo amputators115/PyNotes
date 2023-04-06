@@ -3,7 +3,7 @@
 my_tuple = (23, 567, 89)
 print(dir(my_tuple))
 
-# .count
+# .count -количество раз вречается элемент
 
 my_tuple = (23, 567, 89)
 print(my_tuple.count(567))
