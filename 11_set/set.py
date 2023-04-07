@@ -24,3 +24,14 @@ print(my_set == my_set_two)
 my_set = {'apple', 'ibm', 'dell'}
 print(len(my_set))
 
+# Нельзя использовать оператор del ошибка
+
+my_set = {'apple', 'ibm', 'dell'}
+del my_set[0]
+print(len(my_set))
+
+# Создание пустого набора set()
+
+my_set = set()
+print(my_set)
+print(type(my_set))
