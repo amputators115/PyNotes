@@ -57,3 +57,9 @@ print(my_set.remove(45))
 print(my_set)
 
 # copy - копирование
+
+my_set = {10, 5, 45}
+print(my_set)
+new_set = my_set.copy()
+new_set.add(567)
+print(new_set)
