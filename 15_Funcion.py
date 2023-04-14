@@ -1,5 +1,11 @@
 # Функции - блок кода который можно выполнять многократно
 
+# Правила работы с функциями
+# 1. Название исходя из задач
+# 2. В названии наичнать надо с глагола
+# 3. Одна функция выполняет одну задачу - Не делайте больших функций
+# 4. Не изменяйте внешние относительно функции переменные
+
 def sum(a, b):
     c = a + b
     print(c)
@@ -116,3 +122,77 @@ def post_info(**person):
 info = post_info(name='Petr', post=45)
 print(info)
 
+# Значение парметров функции по умолчанию
+# Если пердается два аргумента то занчение по умолчанию игнорируется
+
+def mult_by_gactor(value, multipl = 1):
+	return value * multipl
+
+print(mult_by_gactor(10, 2))
+
+# Если пердается один то принимается в расчет
+
+
+def mult_by_gactor(value, multipl=1):
+	return value * multipl
+
+
+print(mult_by_gactor(10))
+
+# Колбэк функции - функция которая пердается как аргумент в другую функцию и там вызывается.
+
+def other_fn():
+	pass
+
+def fn_calback(calback_fn):
+	calback_fn()
+
+
+fn_calback(other_fn)
+
+# Пример 
+
+# Есть функция, которая отправляет данные на сервер
+
+def send_data(data):
+	pass
+
+def process_data(input_data, send_data_fn):
+	update_data = input_data.copy()
+	send_data_fn(update_data)
+
+process_data({'name': 'Petr'}, send_data)
+
+# Описание документирование функций
+# через тройные ковычки можно описать функцию и аргументы которые передаются
+# При этом пр наведнии курсора на название фунции появиться подсказка
+
+
+def mult_by_gactor(value, multipl=1):
+
+	"""Здесь будет описание что делает функции
+	   Args:
+	   num(int(тип ожидаемого аргумента)): описание аргумента
+	"""
+	return value * multipl
+
+print(mult_by_gactor(10))
+
+# Можно использовать autoDocstring
+
+
+def mult_by_gactor(value, multipl=1):
+	
+	"""_summary_
+
+	Args:
+		value (_type_): _description_
+		multipl (int, optional): _description_. Defaults to 1.
+
+	Returns:
+		_type_: _description_
+	"""
+	return value * multipl
+
+
+print(mult_by_gactor(10))
