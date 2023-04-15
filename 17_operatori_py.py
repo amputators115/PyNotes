@@ -62,5 +62,25 @@ a > b
 
 # Операторы in, not in
 
+# Оператор in - можем проверить есть ли в ловаре название ключа
+
+my_car = {
+	'brand': 'bmw',
+	'price': 10000
+}
+
+print('brand' in my_car)
+print('year' in my_car)
+
+# Оператор not in - вариант отрицания
+
+my_car = {
+	'brand': 'bmw',
+	'price': 10000
+}
+
+print('brand' not in my_car)
+print('year' not in my_car)
+
 
 
